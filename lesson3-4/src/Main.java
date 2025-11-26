@@ -10,8 +10,7 @@ void main() {
     fieldSize = Loop(fieldSizeTask,sc);
     numberCharacters = Loop(numberCharactersTask,sc);
     sc.close();
-
-    System.out.println(Build(fieldSize,numberCharacters));
+    Build(fieldSize,numberCharacters);
 }
 
 public int Loop(String task,Scanner scanner){
@@ -28,25 +27,17 @@ public int Loop(String task,Scanner scanner){
     return res;
 }
 
-public String Build(int size,int countCharacters){
-    StringBuilder res = new StringBuilder();
-    int rows = size * countCharacters;
-    boolean flag = false;
-    for(int i = 0; i < rows;i++) {
-        for(int k = 0; k < size;k++){
-            if (!flag){
-                for (int j = 0; j < countCharacters; j++) {
-                    res.append('*');
-                    flag = true;
-                }
-            }else{
-                for (int t = 0;t < countCharacters;t++){
-                    res.append(' ');
-                    flag = false;
+public void Build(int size,int symbols){
+    for (int i = 0; i < size; i++) {
+        for (int sr = 0; sr < symbols; sr++) {
+            for (int j = 0; j < size; j++) {
+                char symbol = ((i + j) % 2 == 0) ? '*' : ' ';
+                for (int sc = 0; sc < symbols; sc++) {
+                    System.out.print(symbol + " ");
                 }
             }
+            System.out.println();
         }
-    res.append('\n');
     }
-    return res.toString();
 }
+
