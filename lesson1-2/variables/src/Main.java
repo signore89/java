@@ -1,5 +1,9 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+import java.util.Random;
+
+
 void main() {
     System.out.printf("Переменная типа %-6s занимает %d Байт памяти ( %-3d бит памяти), и принимает значения в диапазоне от %d до %d",
             Byte.TYPE,Byte.BYTES,Byte.SIZE,Byte.MIN_VALUE,Byte.MAX_VALUE);
@@ -20,3 +24,4 @@ void main() {
     System.out.printf("Переменная типа %-6s занимает %d Байт памяти ( %-3d бит памяти), и принимает значения в диапазоне от %g до %g",
             Double.TYPE,Double.BYTES,Double.SIZE,Double.MIN_VALUE,Double.MAX_VALUE);
 }
+
