@@ -2,16 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
     Random random = new Random();
-    int min = 1;
+    int min = 0;
     int max = 10;
     int [] array;
     array = new int[10];
     int number;
-    for (int i = 0; i < array.length; i++){
+    for (int i = 0; i < array.length - 1; i++){
         do
         {
             number = random.nextInt((max - min) + min);
-        }while(!isCheck(array,number));
+        }while(isCheck(array,number));
 
         array[i] = number;
     }
