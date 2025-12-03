@@ -26,6 +26,7 @@ void main(String[] args) {
             break;
         }
     }
+    sc.close();
 }
 
 public int menu(Scanner scanner)
