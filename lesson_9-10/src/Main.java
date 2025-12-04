@@ -22,8 +22,8 @@ public int countingLetters(String line,String reg){
 //        }
 //    }
     for (int i = 0; i < line.length(); i++) {
-        String character = String.valueOf(line.charAt(i));
-        if (character.matches(reg)){
+        char character = line.charAt(i);
+        if (String.valueOf(character).matches(reg)){
             count++;
         }
     }
